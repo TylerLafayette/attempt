@@ -9,13 +9,10 @@ A utility crate for retrying failable operations with various configuration opti
 
 ```rust
 use attempt::Attempt;
-# type Data = ();
-# type Error = String;
 
 fn fetch_data_from_unreliable_api() -> Result<Data, Error> {
     // Fetch data from an API which randomly fails for no reason.
     // We've all dealt with one of these.
-    # Ok(())
 }
 
 fn main() {
@@ -36,7 +33,6 @@ fn main() {
 
 async fn fetch_data_from_unreliable_api_async() -> Result<Data, Error> {
     // Fetch data from an API which randomly fails for no reason, but do it async!
-    # Ok(())
 }
 
 async fn async_attempt_example() -> Result<Data, Error> {
