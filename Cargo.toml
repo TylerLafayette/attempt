@@ -1,0 +1,21 @@
+[package]
+name = "attempt"
+version = "0.1.0"
+authors = ["Tyler Lafayette <tyler@end.email>"]
+edition = "2021"
+license = "MIT"
+
+readme = "README.md"
+description = "Attempt to do something over and over and over and over and..."
+repository = "https://github.com/TylerLafayette/attempt"
+
+keywords = ["retry", "attempt", "async"]
+categories = ["asynchronous"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.13", features = ["rt-multi-thread", "time", "macros"], optional = true }
+
+[features]
+async = ["tokio"]
